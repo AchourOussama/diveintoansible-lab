@@ -16,6 +16,8 @@ services:
      - ${ANSIBLE_HOME}/ubuntu-c/root:/root
      - ../diveintoansible:/home/ansible/diveintoansible
      - ./ssh-connections.sh:/home/ansible/ssh-connections.sh
+     #challenges lab 
+     - /home/oussamaachour/e-learning/ansible/ansible-projects:/home/ansible/ansible-projects
     networks:
      - diveinto.io
 
@@ -73,8 +75,8 @@ services:
     image: spurin/diveintoansible:centos
     #image: spurin/diveintoansible:centos-sshd-2222
     ports: 
-     - ${CENTOS1_PORT_SSHD}:22
-     #- ${CENTOS1_PORT_SSHD}:2222
+    #  - ${CENTOS1_PORT_SSHD}:22
+     - ${CENTOS1_PORT_SSHD}:2222
      - ${CENTOS1_PORT_TTYD}:7681
     privileged: true
     volumes:
